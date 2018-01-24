@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Bulletin</title>
+	</head>
+
+	<body>
+		<nav class="nav">
+			<a href="/add" class="add">New Message</a>
+			<a href="/search" class="add">Search & Delete</a>
+		</nav>
+		<% if (message) { %>
+			<p><%- message %></p>
+		
+		   <% } %>
+
+		
+
+		<h1>Messages</h1>
+		<hr>
+		<% if (title.length === 0) { %>
+		 <h2>No Messages</h2>
+         <% } else { %>
+		<table>
+			<% for (let i = 0; i < title.length; i++) { %>
+				<tr>
+					<td><%= title[i].id %></td>
+					<td><%= title[i].title %></td>
+					<td><%= title[i].body %></td>
+					<td><%= title[i].created %></td>
+				</tr>
+			<% } %>
+		</table>
+	  <% } %>	
+		<hr>
+		
+	</body>
+</html>
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Post Messages</title>
+</head>
+<body>
+<nav class="nav">
+			<a href="/" class="add">Home</a>
+			<a href="/search" class="add">Search & Delete</a>
+		</nav>
+
+<% if (msg) { %>
+			<p><%- msg %></p>
+		    
+		<% } %>
+<form action="/" method="post">
+			<input type="text" name="title" placeholder="title"  value="<%- tt %>"/>
+			<input type="text" name="body" placeholder="body" value="<%- bd %>"/>
+			<button>Add</button>
+		    
+		</form>
+</body>
+</html>
